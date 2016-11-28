@@ -1,0 +1,246 @@
+// Product-Title-Block starts --->
+
+.product-title-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  min-height: 500px;
+  background-color: $trood-blue;
+  position: relative;
+}
+
+.product-title-block__text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin-right: 10px;
+}
+
+.product-title-block__title {
+  font-size: 44px;
+  color: $trood-white;
+  margin-bottom: 30px;
+}
+
+.product-title-block__p-text {
+  @extend .product-title-block__title;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.product-title-block__btn_style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 235px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: $trood-white;
+  font-size: 16px;
+  font-weight: 600;
+  color: $trood-blue;
+}
+
+.product-title-block__image {
+  position: relative;
+  top: 20px;
+
+}
+
+// <--- Product-Title-Block ends
+
+// Product-Adv starts --->
+
+.product-adv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 45px 40px;
+  background-color: #f5f7f9;
+}
+
+.product-adv__p-text {
+  max-width: 580px;
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: $trood-black;
+  margin-bottom: 25px;
+}
+
+.product-adv__adv-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-adv__adv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  max-width: 270px;
+}
+
+.product-adv__adv_h4-text {
+  font-size: 18px;
+  color: $trood-black;
+  margin: 24px 0 19px;
+}
+
+.product-adv__adv_p-text {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  color: $trood-black;
+}
+
+.product-adv__svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: $trood-blue;
+  margin-bottom: 24px;
+}
+
+.product-adv__svg svg {
+  width: 50%;
+  height: 50%;
+  fill: $trood-white;
+}
+
+// <--- Product-Adv ends
+
+// Smth-About-TROOD starts --->
+
+.smth-about-TROOD {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 370px;
+  padding: 60px 30px;
+  background-color: #f5f7f9;
+}
+
+.smth-about-TROOD__text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+  margin-right: 60px;
+}
+
+.smth-about-TROOD__h3-text {
+  font-size: 22px;
+  color: $trood-black;
+  margin-bottom: 30px;
+}
+
+.smth-about-TROOD__p-text {
+  @extend .smth-about-TROOD__h3-text;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.smth-about-TROOD__p-text:last-child {
+  margin-bottom: 0;
+}
+
+.smth-about-TROOD__p-text_blue {
+  font-size: 16px;
+  color: $trood-blue;
+}
+
+.smth-about-TROOD__pics-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;;
+  flex-wrap: wrap;
+  flex: 0 0 460px;
+  margin-top: 60px;
+}
+
+.smth-about-TROOD__pic_border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 200px;
+  height: 80px;
+  border-radius: 2px;
+  border: solid 1px #dcdcdc;
+  margin-bottom: 20px;
+}
+
+.smth-about-TROOD__pic_border:nth-child(even) {
+  width: 240px;
+}
+
+// <--- Smth-About-TROOD ends
+
+// All-Trood starts --->
+
+.all-trood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px 30px;
+}
+
+.all-trood__h3-text {
+  font-size: 22px;
+  color: $trood-black;
+  margin-bottom: 20px;
+}
+
+.all-trood__products-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1160px;
+}
+
+.all-trood__product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 250px;
+  margin: 20px;
+}
+
+.all-trood__product_name {
+  font-size: 18px;
+  color: $trood-black;
+  margin: 6px 0 12px;
+}
+
+.all-trood__product_description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: $trood-black;
+  margin-bottom: 8px;
+  min-height: 60px;
+}
+
+.all-trood__product_more-link {
+  font-size: 14px;
+  color: #4EA1D3;
+}
+
+.all-trood__product_img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+}
+
+// <--- All-Trood ends

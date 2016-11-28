@@ -1,0 +1,21 @@
+@import '../../globalStyles/reset';
+@import '../../globalStyles/globals';
+@import '../../globalStyles/variables';
+@import '../../components/TroodHeader/index';
+
+@import "../../components/TroodProductPage/index";
+
+// Trood-Switcher-Style starts --->
+
+@import "../../components/TroodSwitcherStyle/index";
+
+// <--- Trood-Switcher-Style ends --->
+
+// Form-Bock starts --->
+
+@import "../../components/TroodForm/index";
+
+// <--- Form-Bock ends
+
+@import '../../components/TroodFooter/index';
+@import '../../globalStyles/media';

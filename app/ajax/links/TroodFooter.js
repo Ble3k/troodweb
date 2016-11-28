@@ -1,0 +1,1 @@
+$('#footer-wrapper').load('../../../components/TroodFooter/index.html')

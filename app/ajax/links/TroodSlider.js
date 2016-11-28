@@ -1,0 +1,1 @@
+$('#slider-wrapper').load('../../../components/TroodSlider/index.html')

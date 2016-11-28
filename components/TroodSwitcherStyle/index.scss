@@ -1,0 +1,133 @@
+.trood-products-block {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.trood-products-block__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #dcdcdc;
+  height: 70px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.trood-products-block__header__menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.trood-products-block__header__menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 100%;
+  margin-right: 50px;
+}
+
+.trood-products-block__header__menu__item:last-child {
+  margin-right: 0;
+}
+
+.trood-products-block__header__menu__item__link {
+  @extend .trood-products-block__header__menu__item;
+  margin-right: 0;
+  font-size: 18px;
+  color: $trood-black;
+}
+
+.trood-products-block__header__menu__item__link_active {
+  color: $trood-blue;
+  border-bottom: 2px solid $trood-blue;
+}
+
+.trood-products-block__main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 30px;
+  min-height: 600px;
+}
+
+.trood-products-block__projects__wrapper,
+.trood-products-block__sales__wrapper,
+.trood-products-block__docs__wrapper,
+.trood-products-block__staff__wrapper,
+.trood-products-block__counter__wrapper,
+.trood-products-block__requests__wrapper,
+.trood-products-block__store__wrapper,
+.trood-products-block__finances__wrapper,
+.trood-products-block__auto__wrapper,
+.trood-products-block__manager__wrapper,
+.trood-products-block__employee__wrapper,
+.trood-products-block__account__wrapper,
+.trood-products-block__clients__wrapper,
+.trood-products-block__reports__wrapper,
+.trood-products-block__tenders__wrapper,
+.trood-products-block__ccard__wrapper,
+.trood-products-block__caccount__wrapper,
+.trood-products-block__search__wrapper,
+.trood-products-block__hr__wrapper,
+.trood-products-block__budget__wrapper,
+.trood-products-block__motivation__wrapper,
+.trood-products-block__storage__wrapper,
+.trood-products-block__orders__wrapper,
+.trood-products-block__stocks__wrapper,
+.trood-products-block__accounting__wrapper,
+.trood-products-block__payment__wrapper,
+.trood-products-block__contracts__wrapper,
+.trood-products-block__registration__wrapper,
+.trood-products-block__opportunities__wrapper {
+  display: none;
+  align-items: flex-start;
+}
+
+.trood-products-block_show {
+  display: flex;
+}
+
+.trood-products-block__main__content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+}
+
+.main__content__h3-text {
+  font-size: 30px;
+  color: $trood-black;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.main__content__p-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: $trood-black;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.main__content__list {
+  display: flex;
+  flex-direction: column;
+  max-width: 490px;
+}
+
+.main__content__list__item {
+  font-size: 16px;
+  line-height: 1.5;
+  color: $trood-black;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.main__content__link-more {
+  font-size: 16px;
+  color: $trood-blue;
+  margin-top: 8px;
+}

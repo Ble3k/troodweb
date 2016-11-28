@@ -1,0 +1,118 @@
+.footer-block {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f2f2f2;
+  padding: 45px;
+}
+
+.footer-block__main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1195px;
+}
+
+// Footer-Block-Left starts --->
+
+.footer-block__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-block__left__p-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: $trood-black;
+  margin-top: 21px;
+  max-width: 325px;
+}
+
+.footer-block__left__info {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.footer-block__left__info__title,
+.footer-block__left__info__phone,
+.footer-block__left__info__mail {
+  font-size: 14px;
+  color: $trood-gray;
+  margin-right: 10px;
+}
+
+.footer-block__left__icons-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-block__left__icons-container img {
+  margin-right: 13px;
+}
+
+.footer-block__left__choose-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 233px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: $trood-blue;
+  font-size: 16px;
+  font-weight: 600;
+  color: $trood-white;
+  margin-top: 20px;
+}
+
+// <--- Footer-Block-Left ends
+
+// Footer-Block-Right starts --->
+
+.footer-block__right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-block__right__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 100px;
+}
+
+.footer-block__right__list:last-child {
+  margin-right: 0;
+}
+
+.footer-block__right__list-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
+.footer-block__right__list__item {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.footer-block__right__list__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-block__right__list__item__link {
+  font-size: 14px;
+  color: $trood-gray;
+}
+
+// <--- Footer-Block-Right ends
+
+.footer-block_mobile-spans {
+  display: none;
+}
