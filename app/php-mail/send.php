@@ -10,6 +10,7 @@ $name = trim(strip_tags($_POST['name']));
 $contact = $_POST['contact'];
 $company = trim(strip_tags($_POST['company']));
 $referer = $_SERVER['HTTP_REFERER'];
+$formType = $_POST['type'];
 
 $mail->isSMTP();
 
@@ -36,20 +37,23 @@ if ($company) {
                <b>$contact</b><p>";
 }
 
-$mail->Subject = 'Запрос с сайта';
+$mail->Subject = $formType;
 $mail->Body = $body;
 
-
-if( $name && $contact ) {
-   if( $mail->send() ) {
-    header("location: $referer");
-  } else {
-    echo 'Письмо не может быть отправлено. ';
-    echo 'Ошибка: ' . $mail->ErrorInfo;
+function generateString($length = 64){
+  $chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
+  $numChars = strlen($chars);
+  $string = '';
+  for ($i = 0; $i < $length; $i++) {
+    $string .= substr($chars, rand(1, $numChars) - 1, 1);
   }
-} else {
-  echo 'Заполните пожалуйста все поля. / Please, fill all the fields.';
+  return $string;
 }
+
+ if (strpos($referer, 'svodka.trood.ru')) echo generateString();
+
+$mail->send()
+
 
 
 

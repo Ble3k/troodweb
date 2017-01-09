@@ -38,12 +38,13 @@ $(function () {
   function goTo(e) {
     $('a.trood-products-block__header__menu__item__link').removeClass('trood-products-block__header__menu__item__link_active')
     $('div.trood-products-block__main').children().removeClass('trood-products-block_show')
-    $('div.trood-products-block__main').fadeOut(300, function () { changePage(e.target.hash) })
+    $('div.trood-products-block__main').fadeOut(300, function () {
+      if ($('div.trood-products-block__main').has($('div.trood-products-block_show')).length === 0) changePage(e.target.hash) })
   }
 
   function scrollToProducts() {
     $('body').animate({
-      scrollTop: 873
+      scrollTop: 924,
     }, 1000);
   }
 

@@ -232,8 +232,9 @@
 .news-block__news-container {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
   margin-bottom: 24px;
+  width: 100%;
+  max-width: 1160px;
 }
 
 .news-block__news-wrapper {
@@ -243,6 +244,7 @@
   width: 360px;
   margin-right: 40px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .news-block__news-wrapper:last-child {
@@ -258,18 +260,24 @@
 }
 
 .news-block__news-link {
+  color: $trood-black;
+  font-size: 14px;
+}
+
+.news-block__news-link {
   display: inline-block;
 }
 
 .news-block__news-date {
   font-size: 14px;
   color: $trood-gray;
-  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .news-block__all-news-link {
   font-size: 16px;
   line-height: 1;
+  overflow: hidden;
 }
 
 .news-block__all-news-link:after {

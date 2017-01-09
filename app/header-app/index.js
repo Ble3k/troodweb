@@ -12,7 +12,8 @@ $(function () {
       case ('news'):
         $('a.link_news').addClass('menu__item__link_active'); break
       case ('company'):
-        $('a.link_company').addClass('menu__item__link_active'); break
+        $('span.link_company').addClass('menu__item__link_active');
+        $('svg.menu__item__link_arrow-svg_company').addClass('menu__item__link_arrow-svg_active'); break
       case ('products'):
         $('span.link_products').addClass('menu__item__link_active');
         $('svg.menu__item__link_arrow-svg').addClass('menu__item__link_arrow-svg_active'); break
@@ -22,6 +23,8 @@ $(function () {
 
   function makeActivePopUp(pathTwo) {
     switch (pathTwo) {
+      case ('business'):
+        $('a.popUp_business').addClass('menu__item__link_products_popup__list_item__link_active'); break
       case ('sales'):
         $('a.popUp_sales').addClass('menu__item__link_products_popup__list_item__link_active'); break
       case ('projects'):
@@ -38,13 +41,26 @@ $(function () {
         $('a.popUp_finances').addClass('menu__item__link_products_popup__list_item__link_active'); break
       case ('docs'):
         $('a.popUp_docs').addClass('menu__item__link_products_popup__list_item__link_active'); break
+      case ('team'):
+        $('a.popUp_team').addClass('menu__item__link_products_popup__list_item__link_active'); break
+      case ('career'):
+        $('a.popUp_career').addClass('menu__item__link_products_popup__list_item__link_active'); break
+      case ('contacts'):
+        $('a.popUp_contacts').addClass('menu__item__link_products_popup__list_item__link_active'); break
       default:
     }
   }
 
-  function activatePopUp() {
-    $('div.menu__item__link_products_popup').toggleClass('menu__item__link_products_popup_show')
-    $('div.menu__item__link_svg').toggleClass('menu__item__link_svg_transform')
+  function activatePopUp(popup) {
+    switch (popup) {
+      case ('products'):
+        $('div.menu__item__link_products_popup').toggleClass('menu__item__link_products_popup_show');
+        $('div.menu__item__link_svg').toggleClass('menu__item__link_svg_transform'); break
+      case ('company'):
+        $('div.menu__item__link_company_popup').toggleClass('menu__item__link_company_popup_show');
+        $('div.menu__item__link_svg_company').toggleClass('menu__item__link_svg_transform'); break
+      default:
+    }
   }
 
   function activateLangPopUp() {
@@ -52,18 +68,30 @@ $(function () {
     $('div.lang-switcher__lang_svg').toggleClass('menu__item__link_svg_transform')
   }
 
-  function closePopUp() {
-    $('div.menu__item__link_products_popup').removeClass('menu__item__link_products_popup_show')
-    $('div.menu__item__link_svg').removeClass('menu__item__link_svg_transform')
+  function closePopUp(popup) {
+    switch (popup) {
+      case ('products'):
+        $('div.menu__item__link_products_popup').removeClass('menu__item__link_products_popup_show');
+        $('div.menu__item__link_svg').removeClass('menu__item__link_svg_transform'); break
+      case ('company'):
+        $('div.menu__item__link_company_popup').removeClass('menu__item__link_company_popup_show');
+        $('div.menu__item__link_svg_company').removeClass('menu__item__link_svg_transform'); break
+    }
   }
 
-  $('span.link_products').click(() => activatePopUp())
-  $('span.lang-switcher__lang').click(() => activateLangPopUp())
+  $('span.link_products').click(function() { activatePopUp('products') })
+  $('span.link_company').click(function() { activatePopUp('company') })
+  $('span.lang-switcher__lang').click(function() { activateLangPopUp() })
   $(document).click(function (e) {
-    var popUp = $('div.menu__item__link_products_popup');
-    var btn = $('span.link_products');
-    if(!popUp.is(e.target) && !btn.is(e.target) && btn.has(e.target).length === 0 && popUp.has(e.target).length === 0) {
-      closePopUp();
+    var PpopUp = $('div.menu__item__link_products_popup');
+    var Pbtn = $('span.link_products');
+    var CpopUp = $('div.menu__item__link_company_popup');
+    var Cbtn = $('span.link_company');
+    if(!PpopUp.is(e.target) && !Pbtn.is(e.target) && Pbtn.has(e.target).length === 0 && PpopUp.has(e.target).length === 0) {
+      closePopUp('products');
+    }
+    if(!CpopUp.is(e.target) && !Cbtn.is(e.target) && Cbtn.has(e.target).length === 0 && CpopUp.has(e.target).length === 0) {
+      closePopUp('company');
     }
   })
 
@@ -114,13 +142,31 @@ $(function () {
 
 //  header call-btn --->
 
-  const path = window.location.pathname.split('/')[1]
-
-  if (path === 'news') {
-    $('a.header__bottom__call-btn').click(function () {
-      window.location.assign('../../index.html#form-wrapper')
-    })
+  function showModal(title, contactTitle, btnText) {
+    $('div.header__bottom__call-btn_modal').addClass('header__bottom__call-btn_modal_show')
+    $('body').addClass('overflowBody')
+    $('span.call-btn__form__title').html(title)
+    $('span.call-btn__form__contact-input__title').html(contactTitle + ':')
+    $('button.call-btn__form__submit').html(btnText)
+    if (btnText === 'Заказать') $('button.call-btn__form__submit').addClass('call-btn__form__submit_shrink')
+    $('input.contact').attr('placeholder', contactTitle)
   }
+
+  function closeModal() {
+    $('div.header__bottom__call-btn_modal').removeClass('header__bottom__call-btn_modal_show')
+    $('body').removeClass('overflowBody')
+    $('input.name-input-header').val(undefined)
+    $('input.contact-input-header').val(undefined)
+    $('input').removeClass('errorBox')
+    $('span.form-validate-text-header').html('')
+    window.nameInput = false
+    window.contactInput = false
+  }
+
+  $('span.header__bottom__call-btn').click(function() {showModal('Заказать обратный звонок', 'Ваш телефон', 'Заказать')})
+  $('div.header__bottom__call-btn_modal').click(function(e) {
+    if ($('div.header__bottom__call-btn_modal').has(e.target).length === 0) closeModal()
+  })
 
 //  header call-btn --->
 
@@ -146,6 +192,9 @@ $(function () {
   $('div.header__svg').click(function () { activateMobilePopUp() })
   $('div.product-list').click(function () {
     $('div.popUp__main-menu-link_list-item-wrapper').toggleClass('popUp__main-menu-link_list-item-wrapper_show')
+  })
+  $('div.company-list').click(function () {
+    $('div.popUp__main-menu-link_list-item-wrapper_company').toggleClass('popUp__main-menu-link_list-item-wrapper_show')
   })
 
 // header mobile popUp --->

@@ -1,13 +1,26 @@
 <script type="text/javascript" src="../../app/jquery/jquery.js"></script>
 <script type="text/javascript" src="../../app/header-app/index.js"></script>
 <script type="text/javascript" src="../../app/scroll-slow/index.js"></script>
+<script type="text/javascript" src="../../app/form-validation/onlyPhone/index.js"></script>
 
 <div class="header">
   <div class="header__popUp">
-    <a href="../../dashboard/index.html" class="popUp__main-menu-link link_dashboard">Trood Сводка</a>
+    <a href="http://svodka.trood.ru/" class="popUp__main-menu-link link_dashboard">
+      Trood Сводка
+      <div class="link_dashboard_svg">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+          <g stroke="none" stroke-width="1">
+            <g>
+              <image id="Bitmap" x="1" y="1" width="14" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAA1teXP8meAAAAWpJREFUKBWFUr1KA0EQnpld408OYmERLBKDlZ1gl87GBxBsxAQsJGlsBFsrwVIkEhSrJIJvoE8ggq29mAgWFkZyBjS52XEv5CSJa9xmmdnvb3cWYfxCv5opoZYsMAmi+WRCBoPXejwPxATBLSC8aZGOQdpUQEuGuKtfzmEuMZ0ugsL5QRHDaAwHlcT281XY/7hMbVmBJAg/AiBrL54+NqDWwMDDIBGUiDDOhj2/tlBAgTIaLjLSIijIaiS1TAGX4vn64RCxX4QkAigLwJ6Xb1z4tUyJjMTsHYVtBPyXlHs6CTFGOvf2ru9/Ps6QkyU1K8nVmMRa8XyjFgrYFL9Xu5raIaXOevH6Tnpi8oA1FiK001GQZpiD3USufhoBQShQ9jWj2kn0+i4RyLU7o7qAoz2y34cYVXf0YLS2c2T7j36MNAi8KpT1djXtjN0TsOOyM1tRwHeRoKYvf1+mvCNRuBE1nbvwTavZKEdn34Dvjqn6p+UJAAAAAElFTkSuQmCC"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </a>
     <div class="popUp__main-menu-link product-list">
       <span class="popUp__main-menu-link">Продукты</span>
       <div class="popUp__main-menu-link_list-item-wrapper">
+        <a class="popUp__main-menu-link_list-item" href="../../products/business/index.html">Управление бизнесом</a>
         <a class="popUp__main-menu-link_list-item" href="../../products/sales/index.html">Продажи</a>
         <a class="popUp__main-menu-link_list-item" href="../../products/projects/index.html">Проекты</a>
         <a class="popUp__main-menu-link_list-item" href="../../products/counter-agents/index.html">Контрагенты</a>
@@ -20,29 +33,36 @@
     </div>
     <a href="../../clients/index.html" class="popUp__main-menu-link">Клиенты</a>
     <!--<a href="../../news/index.html" class="popUp__main-menu-link">Новости</a>-->
-    <a href="../../company/index.html#contacts" class="popUp__main-menu-link">Контакты</a>
+    <div class="popUp__main-menu-link company-list">
+      <span class="popUp__main-menu-link">Компания</span>
+      <div class="popUp__main-menu-link_list-item-wrapper_company">
+        <!--<a class="popUp__main-menu-link_list-item" href="../../company/team/index.html">Команда</a>-->
+        <a class="popUp__main-menu-link_list-item" href="../../company/career/index.html">Карьера</a>
+        <a class="popUp__main-menu-link_list-item" href="../../company/contacts/index.html">Контакты</a>
+      </div>
+    </div>
   </div>
   <div class="header__top">
     <div class="header__top__content">
-      <div class="header__top__lang-switcher">
-        <span class="lang-switcher__title">Language:</span>
-        <span class="lang-switcher__lang">
-          Russian
-          <div class="lang-switcher__lang_svg">
-            <svg x="0px" y="0px" viewBox="0 0 306 306">
-              <g>
-                <g>
-                  <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon>
-                </g>
-              </g>
-            </svg>
-          </div>
-        </span>
-        <div class="lang-switcher__popUp">
-          <a class="lang-switcher__ru" href="../../index.html">Russian</a>
-          <span class="lang-switcher__eng">English (soon)</span>
-        </div>
-      </div>
+      <!--<div class="header__top__lang-switcher">-->
+        <!--<span class="lang-switcher__title">Language:</span>-->
+        <!--<span class="lang-switcher__lang">-->
+          <!--Russian-->
+          <!--<div class="lang-switcher__lang_svg">-->
+            <!--<svg x="0px" y="0px" viewBox="0 0 306 306">-->
+              <!--<g>-->
+                <!--<g>-->
+                  <!--<polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon>-->
+                <!--</g>-->
+              <!--</g>-->
+            <!--</svg>-->
+          <!--</div>-->
+        <!--</span>-->
+        <!--<div class="lang-switcher__popUp">-->
+          <!--<a class="lang-switcher__ru" href="../../index.html">Russian</a>-->
+          <!--<span class="lang-switcher__eng">English (soon)</span>-->
+        <!--</div>-->
+      <!--</div>-->
       <div class="header__top__info">
         <div class="info__phone-container">
           <span class="phone-container__title">Телефон:</span>
@@ -78,7 +98,18 @@
         </div>
         <ul class="header__bottom__menu">
           <li class="menu__item">
-            <a href="../../dashboard/index.html" target="_blank" class="menu__item__link link_dashboard">Trood Сводка</a>
+            <a href="http://svodka.trood.ru/" target="_blank" class="menu__item__link link_dashboard">
+              Trood Сводка
+              <div class="link_dashboard_svg">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+                  <g stroke="none" stroke-width="1">
+                    <g>
+                      <image id="Bitmap" x="1" y="1" width="14" height="14" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAA1teXP8meAAAAWpJREFUKBWFUr1KA0EQnpld408OYmERLBKDlZ1gl87GBxBsxAQsJGlsBFsrwVIkEhSrJIJvoE8ggq29mAgWFkZyBjS52XEv5CSJa9xmmdnvb3cWYfxCv5opoZYsMAmi+WRCBoPXejwPxATBLSC8aZGOQdpUQEuGuKtfzmEuMZ0ugsL5QRHDaAwHlcT281XY/7hMbVmBJAg/AiBrL54+NqDWwMDDIBGUiDDOhj2/tlBAgTIaLjLSIijIaiS1TAGX4vn64RCxX4QkAigLwJ6Xb1z4tUyJjMTsHYVtBPyXlHs6CTFGOvf2ru9/Ps6QkyU1K8nVmMRa8XyjFgrYFL9Xu5raIaXOevH6Tnpi8oA1FiK001GQZpiD3USufhoBQShQ9jWj2kn0+i4RyLU7o7qAoz2y34cYVXf0YLS2c2T7j36MNAi8KpT1djXtjN0TsOOyM1tRwHeRoKYvf1+mvCNRuBE1nbvwTavZKEdn34Dvjqn6p+UJAAAAAElFTkSuQmCC"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </a>
           </li>
           <li class="menu__item">
             <span class="menu__item__link link_products">
@@ -95,6 +126,9 @@
             </span>
             <div class="menu__item__link_products_popup">
               <ul class="menu__item__link_products_popup__list">
+                <li class="menu__item__link_products_popup__list__item">
+                  <a href="../../products/business/index.html" class="menu__item__link_products_popup__list_item__link popUp_business">Управление бизнесом</a>
+                </li>
                 <li class="menu__item__link_products_popup__list__item">
                   <a href="../../products/sales/index.html" class="menu__item__link_products_popup__list_item__link popUp_sales">Продажи</a>
                 </li>
@@ -125,15 +159,57 @@
           <li class="menu__item">
             <a href="../../clients/index.html" class="menu__item__link link_client">Клиенты</a>
           </li>
-          <!--<li class="menu__item">-->
-            <!--<a href="../../news/index.html" class="menu__item__link link_news">Новости</a>-->
-          <!--</li>-->
           <li class="menu__item">
-            <a href="../../company/index.html" class="menu__item__link link_company">Компания</a>
+            <a href="../../news/index.html" class="menu__item__link link_news">Новости</a>
+          </li>
+          <li class="menu__item">
+            <span class="menu__item__link link_company">
+              Компания
+              <div class="menu__item__link_svg_company">
+                <svg class="menu__item__link_arrow-svg_company" x="0px" y="0px" viewBox="0 0 306 306">
+                  <g>
+                    <g>
+                      <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"></polygon>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </span>
+            <div class="menu__item__link_company_popup">
+              <ul class="menu__item__link_company_popup__list">
+                <!--<li class="menu__item__link_company_popup__list__item">-->
+                  <!--<a href="../../company/team/index.html" class="menu__item__link_company_popup__list_item__link popUp_team">Команда</a>-->
+                <!--</li>-->
+                <li class="menu__item__link_company_popup__list__item">
+                  <a href="../../company/career/index.html" class="menu__item__link_company_popup__list_item__link popUp_career">Карьера</a>
+                </li>
+                <li class="menu__item__link_company_popup__list__item">
+                  <a href="../../company/contacts/index.html" class="menu__item__link_company_popup__list_item__link popUp_contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
-      <a href="#form-wrapper" class="header__bottom__call-btn">Заказать обратный звонок</a>
+      <span class="header__bottom__call-btn">Заказать обратный звонок</span>
     </div>
   </div>
+</div>
+<div class="header__bottom__call-btn_modal">
+  <form class="call-btn__form">
+    <span class="call-btn__form__title"></span>
+    <span class="form-validate-text-header"></span>
+    <div class="call-btn__form__input-wrapper">
+      <div class="call-btn__form__name-input">
+        <span class="call-btn__form__name-input__title">Ваше имя:</span>
+        <input required name='name' type="text" class="call-btn__form__input name-input-header" placeholder="Введите имя">
+      </div>
+      <div class="call-btn__form__contact-input">
+        <span class="call-btn__form__contact-input__title"></span>
+        <input required name='contact' type="text" class="call-btn__form__input contact contact-input-header" placeholder="">
+      </div>
+      <button class="call-btn__form__submit"></button>
+    </div>
+  </form>
+  <div class="form-block_success-header">Спасибо! Ваше сообщение отправлено.</div>
 </div>

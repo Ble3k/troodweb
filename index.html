@@ -7,6 +7,10 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
   <script type="text/javascript" src="app/jquery/jquery.js"></script>
   <script type="text/javascript" src="app/trood-switcher/main-page/index.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/ru.js"></script>
+  <script type="text/javascript" src="app/clamp/clamp.min.js"></script>
+  <script type="text/javascript" src="app/fb-trood-feed/index.js"></script>
   <title>Trood | Технологии эффективной работы</title>
 </head>
 <body>
@@ -27,7 +31,7 @@
     </div>
     <div class="trood-management-block">
       <h2 class="trood-management-block__h2-text">Trood Управление бизнесом</h2>
-      <p class="trood-management-block__p-text">Полноценный инструмент управления организацией. Решение создано для комплексной автоматизации предприятий любой отрасли, что стало возможным благодаря модульной архитектуре системы, которая включает в себя 8 основных компонентов (модулей): Кадры, Продажи, Проекты, Документы, Скалад, Закупки, Финансы, Контрагенты.</p>
+      <p class="trood-management-block__p-text">Полноценный инструмент управления организацией. Решение создано для комплексной автоматизации бизнес- процессов предприятий любой отрасли, что стало возможным благодаря модульной архитектуре системы, которая включает в себя 8 основных компонентов (модулей): Кадры, Продажи, Проекты, Документы, Скалад, Закупки, Финансы, Контрагенты. Модульная структура позволяет автоматизировать как отдельное направление бизнеса, так и реализовать целостное автоматизированное управление предприятием.</p>
     </div>
     <div class="trood-products-block">
       <div class="trood-products-block__header">
@@ -139,10 +143,10 @@
             <h3 class="main__content__h3-text">Trood Заявки</h3>
             <p class="main__content__p-text">Система управления взаимоотношениями с клиентами, предназначенная для оперативного и стратегического управления продажами.</p>
             <ul class="main__content__list">
-              <li class="main__content__list__item">- обмен сообщениями и файлами с клиентами прямо в карточке сделки;</li>
-              <li class="main__content__list__item">- создание своей модели продаж за счет тонкой настройки этапов;</li>
-              <li class="main__content__list__item">- настройка конкретных показателей для Директора, РОПа, менеджера;</li>
-              <li class="main__content__list__item">- поле продаж позволяет быстро принять правильное решение.</li>
+              <li class="main__content__list__item">- Обмен сообщениями и файлами с клиентами прямо в карточке сделки;</li>
+              <li class="main__content__list__item">- Создание своей модели продаж за счет тонкой настройки этапов;</li>
+              <li class="main__content__list__item">- Настройка конкретных показателей для Директора, РОПа, менеджера;</li>
+              <li class="main__content__list__item">- Поле продаж позволяет быстро принять правильное решение.</li>
             </ul>
             <a href="products/requests/index.html" class="main__content__link-more">Узнать больше о продукте</a>
           </div>
@@ -156,7 +160,7 @@
               <li class="main__content__list__item">- Автоматическая выгрузка документов из карточки заявки;</li>
               <li class="main__content__list__item">- Ведение учета продукции на складе по дате производства, сроку годности, поставщику и тд. ;</li>
               <li class="main__content__list__item">- Выявление расхождений с номенклатурами при приеме продукции;</li>
-              <li class="main__content__list__item">- Интеграция с маркировочным и считывающим оборудованием.</li>
+              <li class="main__content__list__item">- Интеграция с маркировочным и считывающим оборудованием;</li>
               <li class="main__content__list__item">- Автоматическое планирование размещения продукции на складе.</li>
             </ul>
             <a href="products/store/index.html" class="main__content__link-more">Узнать больше о продукте</a>
@@ -185,7 +189,7 @@
       <div class="trood-products-block__content">
         <h3 class="trood-products-block__content__h3-text">Сводка Руководителя</h3>
         <p class="trood-products-block__content__p-text">Система анализа бизнес-данных, которая включает панель отчетов и оповещения о событиях. Решение разработано для руководителей среднего и высшего менеджмента организации. Trood Сводка интегрируется с наиболее распространенными ERP-платформами мира, что позволяет повысить управляемость организаций, не нарушая рабочих процессов.</p>
-        <a href="dashboard/index.html" class="trood-products-block__content__link-more">Узнать больше возможностей</a>
+        <a href="http://svodka.trood.ru/" target="_blank" class="trood-products-block__content__link-more">Узнать больше возможностей</a>
       </div>
       <img src="images/main/dashboard.png" alt="dashboard">
     </div>
@@ -224,26 +228,13 @@
         </div>
       </div>
     </div>
-    <!--<div class="news-block">-->
-      <!--<div class="news-block__main-container">-->
-        <!--<h2 class="news-block__title">Новости</h2>-->
-        <!--<div class="news-block__news-container">-->
-          <!--<div class="news-block__news-wrapper">-->
-            <!--<span class="news-block__news-link">Компания Trood выступила на конференции CES’17 в Сан-Франциско</span>-->
-            <!--<span class="news-block__news-date">сегодня в 9:32</span>-->
-          <!--</div>-->
-          <!--<div class="news-block__news-wrapper">-->
-            <!--<span class="news-block__news-link">Как мы реализовали управление кадрами в Tesla Motors</span>-->
-            <!--<span class="news-block__news-date">15 октября</span>-->
-          <!--</div>-->
-          <!--<div class="news-block__news-wrapper">-->
-            <!--<span class="news-block__news-link">Финаносовый отчет за первый квартал 2017 года</span>-->
-            <!--<span class="news-block__news-date">12 октября</span>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<a href="news/index.html" class="news-block__all-news-link">Все новости</a>-->
-    <!--</div>-->
+    <div class="news-block">
+      <div class="news-block__main-container">
+        <h2 class="news-block__title">Новости</h2>
+        <div class="news-block__news-container"></div>
+      </div>
+      <a href="news/index.html" class="news-block__all-news-link">Все новости</a>
+    </div>
     <!--Form-Block starts-->
     <div id="form-wrapper"></div>
     <script type="text/javascript" src="app/ajax/links/TroodForm.js"></script>

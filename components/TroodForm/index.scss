@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 380px;
+  height: 390px;
   padding: 30px;
   border-radius: 4px;
   background-color: $trood-white;
@@ -33,7 +33,7 @@
   font-size: 14px;
   line-height: 1.3;
   color: $trood-gray;
-  margin-bottom: 29px;
+  margin-bottom: 10px;
 }
 
 .form-block__form {
@@ -46,7 +46,7 @@
   width: 340px;
   height: 46px;
   font-size: 14px;
-  background-color: #f4f4f4;
+  background-color: $trood-white;
   border: solid 1px #dcdcdc;
   border-radius: 3px;
   margin-bottom: 20px;
@@ -77,4 +77,40 @@
   text-align: center;
   margin: 18px 0 0;
   border: 0;
+  cursor: pointer;
+}
+
+.form-block_success {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 50px;
+  background-color: $trood-white;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.errorBox {
+  border: 1px solid #eb6258;
+  box-shadow: 0 0 5px #eb6258;
+  background-color: $trood-white;
+}
+
+.form-validate-text {
+  font-size: 14px;
+  color: #eb6258;
+  text-align: center;
+  margin: 5px 0;
+  height: 20px;
+}
+
+input:-webkit-autofill {
+ background-color: #fff !important;
 }

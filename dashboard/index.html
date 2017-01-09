@@ -4,88 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
-  <script type="text/javascript" src="../app/jquery/jquery.js"></script>
-  <script type="text/javascript" src="../app/dashboard-app/index.js"></script>
-  <script type="text/javascript" src="../app/scroll-slow/index.js"></script>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+  <script type="text/javascript" src="app/jquery/jquery.js"></script>
+  <script type="text/javascript" src="app/dashboard-app/index.js"></script>
+  <script type="text/javascript" src="app/form-validation/phoneMail/index.js"></script>
+  <script type="text/javascript" src="app/form-validation/phoneMailCompany/index.js"></script>
   <title>Trood | Технологии эффективной работы</title>
 </head>
 <body>
   <header class="header">
-    <div class="header__left">
-      <div class="header__left_img"></div>
-      <!--<img src="../images/dashboard/man 1 mobile.png" alt="man">-->
-      <div class="header__left__text-container">
-        <div class="lang-switch">
-          <span class="lang-switch__ru active-lang">ru</span>
-          <span class="lang-switch__en">en</span>
-        </div>
-        <p class="header__left__text-container_text-style">Сложно всё держать в голове?</p>
-        <p class="header__left__text-container_text-style"> Не можете всё проконтролировать?</p>
-        <p class="header__left__text-container_text-style">Хотите вывести бизнес на новый уровень?</p>
-      </div>
-    </div>
+    <!--<div class="header__left">-->
+      <!--<div class="header__left_img">-->
+        <!--<div class="header__left__text-container">-->
+          <!---->
+          <!--<p class="header__left__text-container_text-style">Сложно всё держать в голове?</p>-->
+          <!--<p class="header__left__text-container_text-style"> Не можете всё проконтролировать?</p>-->
+          <!--<p class="header__left__text-container_text-style">Хотите вывести бизнес на новый уровень?</p>-->
+        <!--</div>-->
+        <!--<div class="header-left__change-btn">Хочу изменений</div>-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="header__right">
-      <div class="header__right_img"></div>
-      <div class="mobile_div"></div>
-      <!--<img src="../images/dashboard/man 2.png" alt="man">-->
-      <div class="logo-wrap">
-        <img src="../images/dashboard/trood-logo.png" alt="trood-logo">
-      </div>
-      <div class="header__right__text-container">
-        <h1 class="header__right__h1-style">Trood Сводка </h1>
-        <h2 class="header__right__h2-style">Ваша новая панель управления бизнесом</h2>
-        <div class="header__right__btns-wrap">
-          <a href="#form-wrapper" class="header__right__demo-btn">Демо сводки</a>
-          <a class="header__right__more-btn">Узнать больше</a>
+      <div class="header__right_img">
+        <!--<div class="lang-switch">-->
+        <!--<span class="lang-switch__ru active-lang">ru</span>-->
+        <!--<span class="lang-switch__en">en</span>-->
+        <!--</div>-->
+        <div class="logo-wrap">
+          <img src="images/dashboard/trood-logo.png" alt="trood-logo">
+        </div>
+        <div class="header__right__text-container">
+          <h1 class="header__right__h1-style">Trood Сводка </h1>
+          <h2 class="header__right__h2-style">Все работают - вы управляете</h2>
+          <div class="header__right__btns-wrap">
+            <span class="header__right__demo-btn">Демо сводки</span>
+          </div>
+        </div>
+        <div class="adv1-block">
+          <div class="adv1-block__adv1-wrapper">
+            <img src="images/dashboard/all-reports.png" alt="all-reports">
+            <p class="adv1-block__adv1-wrapper_text-style">Отчеты из всех ваших систем, включая 1С, на одном экране</p>
+          </div>
+          <div class="adv1-block__adv1-wrapper">
+            <img src="images/dashboard/kpi.png" alt="kpi">
+            <p class="adv1-block__adv1-wrapper_text-style">Ключевые показатели бизнеса на планшете или смартфоне</p>
+          </div>
+          <div class="adv1-block__adv1-wrapper">
+            <img src="images/dashboard/aims.png" alt="aims">
+            <p class="adv1-block__adv1-wrapper_text-style">Постановка задач подчиненным и контроль их выполнения</p>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <main class="main">
-    <div class="adv1-block">
-      <div class="adv1-block__adv1-wrapper">
-        <img src="../images/dashboard/all-reports.png" alt="all-reports">
-        <p class="adv1-block__adv1-wrapper_text-style">Отчеты из всех ваших систем, включая 1С, на одном экране</p>
-      </div>
-      <div class="adv1-block__adv1-wrapper">
-        <img src="../images/dashboard/kpi.png" alt="kpi">
-        <p class="adv1-block__adv1-wrapper_text-style">Ключевые показатели бизнеса на планшете или смартфоне</p>
-      </div>
-      <div class="adv1-block__adv1-wrapper">
-        <img src="../images/dashboard/aims.png" alt="aims">
-        <p class="adv1-block__adv1-wrapper_text-style">Постановка задач подчиненным и контроль их выполнения</p>
-      </div>
-    </div>
     <div class="individual-block">
-      <h3 class="individual-block__h3-text">
-        Учитываем индивидуальные потребности вашего бизнеса
-      </h3>
-      <p class="individual-block__p-text">
-        Мы настраиваем отчетность под индивидуальные запросы и нужды клиентов. Есть возможность задать индивидуальные правила отображения информации для каждого пользователя: произвольные сводные отчеты, показатели эффективности, план-факторный анализ, отслеживание проектов
-      </p>
-      <img src="../images/dashboard/mocup.png" alt="mocup-devices">
+      <img src="images/dashboard/mockup.png" alt="mocup-devices">
+      <div class="individual-block__description">
+        <h3 class="individual-block__h3-text">
+          Учитываем индивидуальные потребности вашего бизнеса
+        </h3>
+        <p class="individual-block__p-text">
+          Мы настраиваем отчетность под индивидуальные запросы и нужды клиентов. Есть возможность задать индивидуальные правила отображения информации для каждого пользователя: произвольные сводные отчеты, показатели эффективности, план-факторный анализ, отслеживание проектов
+        </p>
+      </div>
     </div>
     <div class="work-anywhere-block">
-      <h3 class="work-anywhere-block__h3-text">Работа в любом месте и с любого устройства</h3>
-      <p class="work-anywhere-block__p-text">Trood Сводка обеспечивает безопасность вашей информации посредством централизованного хранения данных и надежных алгоритмов шифрования.
-        Поэтому можно без опасений работать с любого устройства и из любой точки мира.</p>
-      <a href="#form-wrapper" class="work-anywhere-block__get-present-btn">Заказать презентацию</a>
+      <div class="work-anywhere-block__description_position">
+        <div class="work-anywhere-block__description">
+          <h3 class="work-anywhere-block__h3-text">Работа в любом месте и с любого устройства</h3>
+          <p class="work-anywhere-block__p-text">Trood Сводка обеспечивает безопасность вашей информации посредством централизованного хранения данных и надежных алгоритмов шифрования.
+            Поэтому можно без опасений работать с любого устройства и из любой точки мира.</p>
+        </div>
+      </div>
+      <!--<a href="#form-wrapper" class="work-anywhere-block__get-present-btn">Заказать презентацию</a>-->
     </div>
     <div class="adv2-block">
       <div class="adv2-block__adv2-wrap">
-        <img src="../images/dashboard/integration.png" alt="integration">
+        <img src="images/dashboard/integration.png" alt="integration">
         <h4 class="adv2-block__adv2-wrap_h4-text">Интеграция со всеми системами
           управления бизнесом</h4>
         <p class="adv2-block__adv2-wrap_p-text">Trood Сводка консолидирует аналитические данные по всем рабочим процессам в реальном времени, интегрируясь с наиболее распространенным в мире ERP платформами (SAP, Oracle, Microsoft, 1C и пр.), а также с системами автоматизации технологических процессов и производств.</p>
       </div>
       <div class="adv2-block__adv2-wrap">
-        <img src="../images/dashboard/data-show.png" alt="data-show">
+        <img src="images/dashboard/data-show.png" alt="data-show">
         <h4 class="adv2-block__adv2-wrap_h4-text">Мгновенное отображение больших объемов данных</h4>
         <p class="adv2-block__adv2-wrap_p-text">У продукта нет ограничений на объем исходных данных. Сводка мгновенно обрабатывает большие объемы данных, обеспечивая непрерывность аналитического процесса. У вас всегда актуальная информация и возможность принимать оперативные управленческие решения.</p>
       </div>
       <div class="adv2-block__adv2-wrap">
-        <img src="../images/dashboard/visualize.png" alt="visualize">
+        <img src="images/dashboard/visualize.png" alt="visualize">
         <h4 class="adv2-block__adv2-wrap_h4-text">Визуализация
           бизнес-процессов</h4>
         <p class="adv2-block__adv2-wrap_p-text">Рабочие процессы компании представлены в ярких и информативных графиках и диаграммах, а необходимые показатели, отчеты и рейтинги всегда актуальны. Вследствие этого сведения о работе вашей компании воспринимаются легче, а управленческие решения принимаются оперативнее. </p>
@@ -93,43 +100,61 @@
     </div>
     <!--Slider-Block starts-->
     <div id="slider-wrapper"></div>
-    <script type="text/javascript" src="../app/ajax/links/TroodSlider.js"></script>
+    <script type="text/javascript" src="app/ajax/links/TroodSlider.js"></script>
     <!--Slider-Block starts-->
     <div class="dashboard-demo-block">
       <h3 class="dashboard-demo-block__h3-text">Демо Cводки</h3>
       <p class="dashboard-demo-block__p-text">Изучите все возможности продукта Trood Сводка бесплатно.</p>
-      <a href="#form-wrapper" class="dashboard-demo-block__demo-btn">Попробовать Демо</a>
-      <img src="../images/dashboard/dashboard.png" alt="dashboard">
+      <span class="dashboard-demo-block__demo-btn">Демо Cводки</span>
+      <img src="images/dashboard/dashboard.png" alt="dashboard">
     </div>
     <div class="form-block">
       <div class="form-block_back-opacity">
-        <div class="form-block__from-container">
+        <div class="form-block__from-container bottom-form">
           <h3 class="form-block__header">Заказать презентацию</h3>
-          <form id="form-wrapper"  method="post" action="../app/php-mail/send.php" class="form-block__form">
-            <input required name='name' type="text" class="form__input" placeholder="Ваше имя">
-            <input required name='company' type="text" class="form__input" placeholder="Ваша компания">
-            <input required name='contact' type="text" class="form__input" placeholder="Ваш телефон или email">
-            <button type="submit" class="form__submit">Отправить</button>
+          <span class="form-validate-text bottom-form-validate"></span>
+          <form id="form-wrapper" class="form-block__form">
+            <input required name='name' type="text" class="form__input input-name" placeholder="Ваше имя">
+            <input required name='company' type="text" class="form__input input-company" placeholder="Ваша компания">
+            <input required name='contact' type="text" class="form__input input-contact" placeholder="Ваш телефон или email">
+            <button class="bottom-button">Отправить</button>
           </form>
         </div>
+        <div class="form-block_success bottom-success">Спасибо! Ваше сообщение отправлено.</div>
       </div>
     </div>
     <div class="footer-block dashboard__footer">
       <div class="footer-block__left-container">
-        <img src="../images/trood-full-logo.png" alt="trood-full-logo">
-        <div class="footer-block__links-wrapper">
-          <a href="../index.html" class="footer-block__trood-link">Перейти на trood.ru</a>
-          <a href="../index.html#product" class="footer-block__product-link">Посмотреть все продукты</a>
-        </div>
+        <a href="http://trood.ru/" target="_blank">
+          <img src="images/trood-full-logo.png" alt="trood-full-logo">
+        </a>
       </div>
       <div class="footer-block__center-container">
         <span class="footer-block__phone">+7 (499) 426-10-00</span>
         <span class="footer-block__mail">info@trood.ru</span>
       </div>
       <div class="footer-block__right-container">
-        <!--<a href="#" class="footer-block__callback-btn">Заказать обратный звонок</a>-->
+        <a href="http://trood.ru/index.html#products" class="footer-block__callback-btn">Посмотреть все продукты Trood</a>
       </div>
     </div>
   </main>
+  <div class="header__bottom__call-btn_modal">
+    <div class="form-block__from-container">
+      <span class="call-btn__form__title"></span>
+      <span class="form-validate-text"></span>
+      <div class="call-btn__form__input-wrapper">
+        <div class="call-btn__form__name-input">
+          <span class="call-btn__form__name-input__title">Ваше имя:</span>
+          <input required name='name' type="text" class="call-btn__form__input name-input" placeholder="Введите имя">
+        </div>
+        <div class="call-btn__form__contact-input">
+          <span class="call-btn__form__contact-input__title"></span>
+          <input required name='contact' type="text" class="call-btn__form__input contact contact-input" placeholder="">
+        </div>
+        <button class="call-btn__form__submit form__submit"></button>
+      </div>
+    </div>
+    <div class="form-block_success">Спасибо! Ваше сообщение отправлено.</div>
+  </div>
 </body>
 </html>
